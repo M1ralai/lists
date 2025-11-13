@@ -1,5 +1,13 @@
 #include "utils.hpp"
 
+Shape::Shape(int x, int y, int z, int heigth, char filler) {
+    this -> x = x;
+    this -> y = y;
+    this -> z = z;
+    this -> height = heigth;
+    this -> filler = filler;
+}
+
 void Shape::GetInput(char ch) {
 #ifdef DEBUG
     std::cout<<" Shape get input: "<< ch;

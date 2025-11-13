@@ -72,9 +72,9 @@ void SingleList::SendInputToShape(int index, char input) {
     }
 }
 
-std::vector<Shape> SingleList::TakeShapes() {
-    std::vector<Shape> res;
+std::vector<Shape*> SingleList::TakeShapes() {
+    std::vector<Shape*> res;
     for(SingleLinkedNode *curr = head; curr != nullptr; curr = curr -> next)
-        res.push_back(*(curr -> data));
+        res.push_back(curr -> data);
     return res;
 }

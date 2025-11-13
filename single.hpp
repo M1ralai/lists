@@ -15,7 +15,7 @@ class SingleList {
         void AddToStart(SingleLinkedNode*);
         void DeleteGivenNode(int);
         void SendInputToShape(int, char);
-        std::vector<Shape> TakeShapes();
+        std::vector<Shape*> TakeShapes();
 };
 
 #endif
