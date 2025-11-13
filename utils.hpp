@@ -4,21 +4,23 @@
 struct Shape{
     int x;
     int y;
-    int height;
+    int z;
+    int heigth;
     void GetInput(char);
 };
 
 struct SingleLinkedNode {
     SingleLinkedNode *next;
-    Shape *d                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ata;
-    SingleLinkedNode();
+    Shape *data;
+    SingleLinkedNode(Shape*);
 };
+
 
 struct DoubleLinkedNode {
     DoubleLinkedNode *next;
     DoubleLinkedNode *prev;
-    SingleLinkedNode data;
-    DoubleLinkedNode();
+    SingleLinkedNode *data;
+    DoubleLinkedNode(SingleLinkedNode*);
 };
 
 #endif

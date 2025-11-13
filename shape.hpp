@@ -3,15 +3,21 @@
 #include "utils.hpp"
 
 class Rectangle:public Shape {
-    void Draw();
+    public:
+        Rectangle(int, int, int, int);
+    // void Draw();
 };
 
 class Triangle:public Shape {
-    void Draw();
+    public:
+        Triangle(int, int, int, int);
+    // void Draw();
 };
 
 class Star:public Shape {
-    void Draw();
+    public:
+        Star(int, int, int, int);
+    // void Draw();
 };
 
 #endif

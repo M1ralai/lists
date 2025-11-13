@@ -1,4 +1,6 @@
 #include "single.hpp"
+#include <iostream>
+
 
 SingleList::SingleList() {
     size = 0;
@@ -60,13 +62,19 @@ void SingleList::DeleteGivenNode(int index) {
 void SingleList::SendInputToShape(int index, char input) {
     int i = 0;
     SingleLinkedNode *curr = head;
-    for(; curr -> next != nullptr; curr = curr -> next);
-    curr -> data->GetInput(input);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+    for(; curr -> next != nullptr && i != input; curr = curr -> next, i++);
+    if (curr != nullptr) {
+        curr -> data -> GetInput(input);
+    }   else {
+        #ifdef DEBUG
+        std::cout<< "There is no shape with this index"
+        #endif
+    }
 }
 
 std::vector<Shape> SingleList::TakeShapes() {
     std::vector<Shape> res;
-    for(SingleLinkedNode *curr = head; curr -> next != nullptr; curr = curr -> next)
+    for(SingleLinkedNode *curr = head; curr != nullptr; curr = curr -> next)
         res.push_back(*(curr -> data));
     return res;
 }

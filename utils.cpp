@@ -20,11 +20,13 @@ void Shape::GetInput(char ch) {
     }
 }
 
-DoubleLinkedNode::DoubleLinkedNode() {
+DoubleLinkedNode::DoubleLinkedNode(SingleLinkedNode *data) {
+    this -> data = data;
     this -> next = nullptr;
     this -> prev = nullptr;
 }
 
-SingleLinkedNode::SingleLinkedNode(){
+SingleLinkedNode::SingleLinkedNode(Shape *sh){
+    this -> data = sh;
     this -> next = nullptr;
 }

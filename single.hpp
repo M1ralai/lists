@@ -3,6 +3,7 @@
 
 #include <vector>
 #include "utils.hpp"
+
 class SingleList {
     private:
         int size;
