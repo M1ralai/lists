@@ -10,11 +10,12 @@ class Shape{
         int x;
         int y;
         int z;
+        int width;
         int height;
-        Shape(int, int, int, int, char);
+        std::vector<std::vector<char>> writable;
+        Shape(int, int, int, int, int, char);
         virtual ~Shape() = default;
         void GetInput(char);
-        virtual std::vector<std::string> GetWritingData() = 0;
 };
 
 struct SingleLinkedNode {

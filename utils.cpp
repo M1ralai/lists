@@ -1,10 +1,11 @@
 #include "utils.hpp"
 
-Shape::Shape(int x, int y, int z, int heigth, char filler) {
+Shape::Shape(int x, int y, int z, int heigth, int width, char filler) {
     this -> x = x;
     this -> y = y;
     this -> z = z;
     this -> height = heigth;
+    this -> width = width;
     this -> filler = filler;
 }
 

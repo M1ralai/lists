@@ -6,20 +6,26 @@
 
 class Rectangle:public Shape {
     public:
-        Rectangle(int, int, int, int, char);
-        std::vector<std::string>GetWritingData();
+        int width;
+        Rectangle(int, int, int, int, int, char);
+        // std::vector<std::vector<char>>GetWritingData();
     // void Draw();
 };
 
 class Triangle:public Shape {
     public:
-        Triangle(int, int, int, int, char);
+        int width;
+        //hight must be a odd number otherwise you cannot get a proper triangle
+        //this exception handled in constructor
+        Triangle(int, int, int, int, int, char);
+        // std::vector<std::vector<char>>GetWritingData();
     // void Draw();
 };
 
 class Star:public Shape {
     public:
-        Star(int, int, int, int, char);
+        Star(int, int, int, int, int, char);
+        // std::vector<std::vector<char>>GetWritingData();
     // void Draw();
 };
 
