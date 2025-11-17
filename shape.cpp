@@ -4,6 +4,7 @@
 Rectangle::Rectangle(int x, int y, int z, int height, int width, char filler) : Shape(x,y,z,height,width,filler){
     writable = std::vector<std::vector<char>>(height, std::vector<char>(width, filler));
 };
+
 Triangle::Triangle(int x, int y, int z, int height,int width, char filler) : Shape(x,y,z,height,width,filler){
     if(width % 2 == 0) {
         this -> height = height - 1;

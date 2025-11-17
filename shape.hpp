@@ -6,6 +6,7 @@
 
 class Rectangle:public Shape {
     public:
+        //int x, int y, int z, int height, int width, char filler
         Rectangle(int, int, int, int, int, char);
         // std::vector<std::vector<char>>GetWritingData();
     // void Draw();
