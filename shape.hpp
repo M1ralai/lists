@@ -6,7 +6,6 @@
 
 class Rectangle:public Shape {
     public:
-        int width;
         Rectangle(int, int, int, int, int, char);
         // std::vector<std::vector<char>>GetWritingData();
     // void Draw();
@@ -14,7 +13,6 @@ class Rectangle:public Shape {
 
 class Triangle:public Shape {
     public:
-        int width;
         //hight must be a odd number otherwise you cannot get a proper triangle
         //this exception handled in constructor
         Triangle(int, int, int, int, int, char);
