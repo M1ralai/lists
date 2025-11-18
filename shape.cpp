@@ -21,20 +21,20 @@ Triangle::Triangle(int x, int y, int z, int height,int width, char filler) : Sha
     }
     writable = res;
 };
-Star::Star(int x, int y, int z, int height,int width, char filler) : Shape(x,y,z,height,width,filler){
-    std::vector<std::vector<char>> res(height, std::vector<char>(height/2, ' '));
-    int center = height - 1;
+Star::Star(int x, int y, int z, int height, int width, char filler):Shape(x, y, z, height, width, filler) {
+
+    std::vector<std::vector<char>> res(height, std::vector<char>(height, ' '));
     int mid = height / 2;
+
     for (int i = 0; i < height; i++) {
         int dist = (i <= mid) ? i : (height - 1 - i);
-        int left = center - dist;
-        int right = center + dist;
-
+        int left = mid - dist;
+        int right = mid + dist;
         std::fill(res[i].begin() + left, res[i].begin() + right + 1, filler);
     }
-    writable = res;
-};
 
+    writable = res;
+}
 
 // std::vector<std::vector<char>> Rectangle::GetWritingData() {
 //     return std::vector<std::vector<char>>(height, std::vector<char>(width, filler));
